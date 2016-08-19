@@ -21,6 +21,8 @@ $(document).ready(function() {
     } else if (title.indexOf('Ejournals') > -1) {
         $("#york-header > div.header-child-right").html('<span>Ejournals Guide</span>  <i class="fa fa-laptop" aria-hidden="true"></i>')
     } else if (title.indexOf('Skills') > -1) {
-        $("#york-header > div.header-child-right").html('<span>Skills Guides</span>  <i class="fa fa-th-large" aria-hidden="true"></i>')
+        $("#york-header > div.header-child-right").html('<span>Digital Skills Guides</span>  <i class="fa fa-th-large" aria-hidden="true"></i>');
+		$("#s-lg-guide-name").css('display','none');
+		$("#skillstitle").css('display','block');
     }
 });

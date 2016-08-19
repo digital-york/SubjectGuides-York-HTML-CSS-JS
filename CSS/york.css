@@ -59,6 +59,12 @@
 	color: #8c1770;
 	padding-left: 14px; border-bottom: 1px solid #8c1770;
 }
+#skillstitle {
+	color:#8c1770;
+	padding-left:14px; 
+	border-bottom:1px solid #8c1770;
+	display:none
+}
 
 #s-lg-guide-header-info h1 {font-size: 32px}
 #s-lg-guide-header-info {margin-top: -10px;background-color: #f1f1f1;padding-top:1px;}
@@ -99,9 +105,11 @@ margin-bottom: 20px;
     line-height: 166%
 }
 
+.s-lg-link-list { 
 	list-style-type:none;
 	margin-left:-20px
 }
+.s-lg-link-list li {
 	background:#f1f1f1;
 	margin:2px 2px 5px 2px;
 	padding:10px;
