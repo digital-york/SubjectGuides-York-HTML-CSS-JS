@@ -59,12 +59,8 @@
 	color: #8c1770;
 	padding-left: 14px; border-bottom: 1px solid #8c1770;
 }
-#skillstitle {
-	color:#8c1770;
-	padding-left:14px; 
-	border-bottom:1px solid #8c1770;
-	display:none
-}
+
+#skillstitle{color:#8c1770;padding-left:14px; border-bottom:1px solid #8c1770;display:none;}
 
 #s-lg-guide-header-info h1 {font-size: 32px}
 #s-lg-guide-header-info {margin-top: -10px;background-color: #f1f1f1;padding-top:1px;}
@@ -102,9 +98,9 @@ margin-bottom: 20px;
 .s-lg-link-list,
 .s-lg-link-list-2 {
 	font-size: 110%;
-    line-height: 166%
+	/* line-height: 133%; */
+        line-height: 166%;
 }
-
 .s-lg-link-list { 
 	list-style-type:none;
 	margin-left:-20px
@@ -124,7 +120,7 @@ margin-bottom: 20px;
 	background:none
 }
 p {
-	line-height: 133%
+	line-height: 133%;
 }
 a,
 a:focus,
@@ -156,25 +152,108 @@ a:hover {
 	box-shadow: none;
 	border: 1px solid #E5E5E5;
 	margin: 6px;
+	
 	font-weight: bold
 }
 .sghp-cell a {display:block;padding: 6px;background-color:#f1f1f1}
 .sghp-cell a:hover {background-color: #97217A; color: #FFF}
 
 /* .s-lg-label-moreinfo, .s-lg-label-more, .s-lg-database-desc, .s-lg-link-desc {display:inline!important} */
-.s-lg-label-moreinfo, .s-lg-label-more {display:inline!important}
+.s-lg-guide-body .s-lg-label-moreinfo, .s-lg-label-more {display:inline!important}
 
 /* .s-lg-database-desc:before, .s-lg-link-desc:before { content: '\A'; white-space: pre-wrap} */
 .s-lg-label-moreinfo:after { content: '\A'; white-space: pre-wrap}
-.s-lg-database-desc {margin-top: 4px; display:inline-block!important}
+.s-lg-guide-body .s-lg-database-desc {margin-top: 4px; display:inline-block!important}
 
 .sger-info {padding-left: 3px}
 /* Fix up nasty overhanging underline on links */
 .eresourcesguide [id^="s-lg-content-"] > a {display: inline-block}
 
 /* Differentiate style for Information icons on e-Resources guide */
-.s-lg-database-moreinfo, .s-lg-content-moreinfo    {background-color: #f1f1f1;
+.s-lg-database-moreinfo, .s-lg-content-moreinfo, .s-lg-content-more-info    {background-color: #f1f1f1;
     padding: 10px;
     border: orange 2px solid;
     border-radius: 8px;
 margin-top: 5px}
+
+/* Steph's hacks 7th Sept */
+.btn-link, .btn-link:focus {color:#8c1770;}
+.btn-link:hover  {color:#a42383;}
+/* .btn-link:visited  {color:#8c1770;}
+.btn-link:active  {color:#8c1770;} 
+.btn-link:focus  {color:#8c1770;} */
+.s-lg-label-more-info button {font-size:110%;margin-top:-2px;}
+.s-lg-icon {display:none;}
+
+/* Jim making the E-Resources Guide (& other pages) box & arrows into question marks 9th Sept  */
+.s-lg-link-list .fa-external-link:before {
+content: "\f059";
+color: #8c1770;
+font-size : 170%
+}
+
+/* Jim making the A-Z Quick links into question marks 9th Sept */
+#s-lg-az-cols .s-lg-icon + .fa-external-link:before {
+content: "\f059";
+color: #8c1770;
+font-size: 13.2px;
+vertical-align: -16%
+}
+#s-lg-az-cols a > .fa-external-link:first-child {display:none}
+.s-lg-az-result-title { display: inline-block; margin-right: 0 }
+
+/* A-Z: Kill vendors dropdown and question marks*/
+.york-a-z #col-vendors,.york-a-z .s-lg-az-result-badges  {display: none}
+
+/* A-Z: Kill experts box */
+#s-lg-az-experts-div {display: none !important}
+
+/* A-Z: Change Info icon to i + More button */
+.york-a-z .sger-info {border: 2px solid; border-radius: 8px; padding: 3px; background-color:#FFF}
+.york-a-z .sger-info:before {content: "\f05a\00a0More info"; font-size:120%;}
+
+/* A-Z: Background colour of info boxes to white */
+.york-a-z .s-lg-content-more-info {background-color: #FFF}
+
+/* A-Z: Style individual database results */
+.york-a-z .s-lg-az-result {
+    background: #f1f1f1;
+    margin: 10px 2px 10px 2px;
+    padding: 10px;
+    border: 1px solid #d3d3d3;
+    border-radius: 10px;
+}
+
+/* A-Z: Add a  top margin */
+.york-a-z button.s-lg-label-more {
+    margin-top: 10px;
+}
+
+/* A-Z: Kill the bottom space */
+.york-a-z .s-lg-az-result-props {display: none}
+
+/* A-Z: Kill the horrible button outline */
+.york-a-z button.s-lg-label-more, #s-lg-az-index .btn-group>.btn-link {outline: none}
+
+/* A-Z: Make sure visitors with JS turned off know that they need to turn it on */
+.york-a-z noscript {font-size: 120%; color: red}
+
+/* A-Z: Style the alphabet */
+.york-a-z #s-lg-az-index {margin-bottom: 15px}
+.york-a-z .btn-group {display: table;width: 100%;background-color: #97217A;border-radius: 6px; padding: 4px;}
+.york-a-z #s-lg-az-index button {font-size:120%; color: #FFF;display: table-cell; min-width: 3.571428571428571%}
+.york-a-z #s-lg-az-index button:hover {background-color: #FFF; color:  #97217A; border-radius: 4px}
+.york-a-z .btn-group .btn + .btn, .btn-group .btn + .btn-group, .btn-group .btn-group + .btn, .btn-group .btn-group + .btn-group {margin-left:0}
+.york-a-z #col2 .welcome {margin-top:10px; margin-bottom:30px}
+
+/* A-Z: Increase font-size for E-resource titles */
+#s-lg-az-results .s-lg-az-result-title {font-size: 17px;}
+
+/* A-Z: Capitalise text of results count*/
+#s-lg-az-result-count {text-transform:capitalize;}
+
+/* A-Z: Hide the "SubjectGuides" list item from the breadcrumb trail */
+.york-a-z #s-lib-bc-site {display:none}
+
+/* A-Z: Unhide the last item in the breadcrumb trail */
+.york-a-z #s-lib-bc-page {display:inline}
