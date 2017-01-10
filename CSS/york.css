@@ -203,7 +203,7 @@ vertical-align: -16%
 .s-lg-az-result-title { display: inline-block; margin-right: 0 }
 
 /* A-Z: Kill vendors dropdown and question marks*/
-.york-a-z #col-vendors,.york-a-z .s-lg-az-result-badges  {display: none}
+.york-a-z #col-vendors,.york-a-z .s-lg-az-result-badges > div {display: none}
 
 /* A-Z: Kill experts box */
 #s-lg-az-experts-div {display: none !important}
