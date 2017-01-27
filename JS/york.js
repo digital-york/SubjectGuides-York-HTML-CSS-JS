@@ -16,6 +16,7 @@ $(document).ready(function() {
 		$(".s-lg-az-result").has(".s-lg-az-result-description").each(function() {
 			$( ".s-lg-content-more-info ", this).insertAfter( $( ".s-lg-az-result-badges", this ));
 			$( ".s-lg-label-moreinfo", this).insertAfter( $( ".s-lg-az-result-badges", this ));
+                       console.log("s-lg-az-result-badges block used");
 		});
 	/* Steph's hack - 7th Sept */
 	/* var replaced = $("body").html().replace(/> <i class="fa fa-fw fa-external-link/g,'><i class="fa fa-fw fa-question-circle');
