@@ -33,6 +33,8 @@ if ( location.pathname.indexOf('/az.php') > -1 ) $("#s-lib-bc-page").html('<a hr
         $("#york-header > div.header-child-right").html('<span>Ebooks Guide</span>  <i class="fa fa-laptop" aria-hidden="true"></i>')
     } else if (title.indexOf('Ejournals') > -1) {
         $("#york-header > div.header-child-right").html('<span>Ejournals Guide</span>  <i class="fa fa-laptop" aria-hidden="true"></i>')
+}  else if (title.indexOf('ractical') > -1) {
+        $("#york-header > div.header-child-right").html('<span>Practical Guides</span>  <i class="fa fa-cogs" aria-hidden="true"></i>')
     } else if (title.indexOf('Skills') > -1) {
         $("#york-header > div.header-child-right").html('<span>Digital Skills Guides</span>  <i class="fa fa-th-large" aria-hidden="true"></i>');
 	$("#s-lg-guide-name").css('display','none');
