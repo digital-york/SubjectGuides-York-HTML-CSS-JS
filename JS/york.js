@@ -1,3 +1,5 @@
+<!-- The following is included in the 'Look & Feel' >> 'Custom JS/CSS Code' box, below the CSS style rules -->
+<script>
 $(document).ready(function() {
 	/* The following code block is probably redundant after the big update of 6 Sept 2016, and is therefore commented out
 		$(".link-pointer").each(function() {
@@ -45,3 +47,60 @@ if ( location.pathname.indexOf('/az.php') > -1 ) $("#s-lib-bc-page").html('<a hr
 // JEA 19/10/2016: Fix to correct the wrong-info-box-displayed bug
 $( ".s-lg-label-moreinfo > button" ).attr( "onclick", "jQuery(this).parent().nextAll('.s-lg-content-more-info').toggle()" )
 	});
+	
+</script>
+	
+<style>
+#toc {display:none;}
+  /* Smartphone Portrait and Landscape */
+   @media only screen
+      and (min-device-width : 0px)
+   and (max-device-width : 991px){
+#toc {display:block;}
+}
+</style>
+
+<script>
+//SJ - 15/08/2017 - TOC generator for mobile view
+$( document ).ready(function() {
+
+$("h2").each(function(index, value){
+    $(this).attr('id', "uniqueID" + index);
+});
+
+var ToC =
+  "<div id='toc'><nav role='navigation' class='table-of-contents'>" +
+       "<ul>";
+
+var newLine, el, title, link;
+
+$("h2").each(function() {
+
+  el = $(this);
+  title = el.text();
+  link = "#" + el.attr("id");
+
+  newLine =
+    "<li>" +
+      "<a href='" + link + "' id='linkindex-" + link +"'>" +
+        title +
+      "</a>" +
+    "</li>";
+
+  ToC += newLine;
+
+});
+
+ToC +=
+   "</ul>" +
+  "</nav><br></div>";
+
+$("#s-lg-col-1").prepend(ToC);
+})
+
+</script>
+
+
+<script src="https://awesome-table.com/AwesomeTableInclude.js"></script>
+
+<link rel="shortcut icon" href="https://s3.amazonaws.com/libapps/accounts/41409/images/favicon.ico" />

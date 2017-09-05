@@ -1,5 +1,5 @@
 <!-- The following is included in the 'Look & Feel' >> 'Custom JS/CSS Code' box -->
-
+<style>
 #york-header,
 #york-footer {
 	margin: 0 auto
@@ -257,3 +257,5 @@ vertical-align: -16%
 
 /* A-Z: Unhide the last item in the breadcrumb trail */
 .york-a-z #s-lib-bc-page {display:inline}
+
+</style>
