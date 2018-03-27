@@ -247,7 +247,7 @@ vertical-align: -16%
 .york-a-z #col2 .welcome {margin-top:10px; margin-bottom:30px}
 
 /* A-Z: Increase font-size for E-resource titles */
-#s-lg-az-results .s-lg-az-result-title {font-size: 17px;}
+#s-lg-az-results .s-lg-az-result-title, .s-lg-az-result-title {font-size: 17px;}
 
 /* A-Z: Capitalise text of results count*/
 #s-lg-az-result-count {text-transform:capitalize;}
